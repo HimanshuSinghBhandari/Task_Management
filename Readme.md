@@ -51,7 +51,7 @@ This is a full-stack task management application built with the following techno
 
 ### Navigate to the client directory:
   
-cd client/trlo
+cd client
 npm install
 npm run dev
 ## Backend
