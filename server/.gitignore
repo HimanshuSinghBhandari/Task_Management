@@ -1,0 +1,33 @@
+# .gitignore
+
+# Ignore environment variable files
+.env
+env
+/server/.env
+
+# Node.js
+node_modules/
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs/
+*.log
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Other potential files/folders to ignore
+.DS_Store
+*.swp
+.idea/
+.vscode/
