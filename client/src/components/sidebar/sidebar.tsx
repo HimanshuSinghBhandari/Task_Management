@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(`${process.env.SERVER}/user/logout`);
+      await axios.post("https://task-management-server-phi-five.vercel.app/user/logout");
       localStorage.removeItem('token');
       router.push('/');
       toast.success("Logged out Successfully!");
@@ -42,7 +42,7 @@ const Sidebar: React.FC = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await axios.get(`${process.env.SERVER}/user/my-details`);
+      const response = await axios.get("https://task-management-server-phi-five.vercel.app/user/my-details");
       setUsername(response.data.user);
     } catch (error) {
       console.error("Error fetching user details:", error);

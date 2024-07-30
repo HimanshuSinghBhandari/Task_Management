@@ -9,9 +9,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.CLIENT, // or your client's origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: process.env.CLIENT,
   credentials: true,
   optionsSuccessStatus: 200
 };
@@ -26,6 +24,7 @@ app.use("/user", UserAuthRouter);
 app.use("/api", TaskRouter);
 
 dbConnect();
+
 app.listen(4000, () => {
   console.log("Server running on http://localhost:4000");
 });

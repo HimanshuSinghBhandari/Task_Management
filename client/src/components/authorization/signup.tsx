@@ -47,7 +47,7 @@ const SignupPage: React.FC = () => {
     }
 
     try {
-      await axios.post(`${process.env.SERVER}/user/signup`, {
+      await axios.post("https://task-management-server-phi-five.vercel.app/user/signup", {
         email:signupInput.email,
         password: signupInput.password,
         username: signupInput.username,

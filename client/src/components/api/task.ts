@@ -1,7 +1,7 @@
 // api/tasks.ts
 import axios from 'axios';
 
-const API_URL = `${process.env.SERVER}/api`;
+const API_URL =  "https://task-management-server-phi-five.vercel.app/api";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
