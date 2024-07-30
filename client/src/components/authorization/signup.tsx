@@ -47,7 +47,7 @@ const SignupPage: React.FC = () => {
     }
 
     try {
-      await axios.post("http://localhost:4000/user/signup", {
+      await axios.post(`${process.env.SERVER}/user/signup`, {
         email:signupInput.email,
         password: signupInput.password,
         username: signupInput.username,
