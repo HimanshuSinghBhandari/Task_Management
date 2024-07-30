@@ -14,7 +14,9 @@ const DashHomePage = () => {
   
   const fetchUserDetails = async () => {
     try {
-      const response = await axios.get("https://task-management-server-phi-five.vercel.app/user/my-details");
+      const response = await axios.get("https://task-management-server-phi-five.vercel.app/user/my-details", {
+        withCredentials:true
+      });
       setUsername(response.data.user);
     } catch (error) {
       console.error("Error fetching user details:", error);
