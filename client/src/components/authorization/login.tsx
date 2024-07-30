@@ -38,9 +38,7 @@ const LoginPage: React.FC = () => {
     setError('');
 
     try {
-      const response = await axios.post("https://task-management-server-phi-five.vercel.app/user/login", loginInput, {
-        withCredentials:true
-      });
+      const response = await axios.post("https://task-management-server-phi-five.vercel.app/user/login", loginInput,);
       localStorage.setItem('token', response.data.token);
       router.push('/dashboard');
       toast.success("Logged in Successfully!");
