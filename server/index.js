@@ -3,15 +3,16 @@ const UserAuthRouter = require("./routes/userAuthRouter");
 const dbConnect = require("./lib/dbConnect");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const TaskRouter = require("./routes/TaskRouter")
-require("dotenv").config();
+const TaskRouter = require("./routes/TaskRouter");
 const app = express();
 
 // CORS configuration
 const corsOptions = {
   origin: process.env.CLIENT,
   credentials: true,
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"]
 };
 
 app.use(cors(corsOptions));
