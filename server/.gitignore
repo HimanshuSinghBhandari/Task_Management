@@ -31,3 +31,5 @@ out/
 *.swp
 .idea/
 .vscode/
+server/vercel.json
+**/vercel.json
